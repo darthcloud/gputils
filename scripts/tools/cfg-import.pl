@@ -657,7 +657,7 @@ sub read_device_informations()
 
       if ($fields[2] =~ /^$pic_name_mask$/io)
         {
-        ($mcu_name, $class_name, $directive_count) = (uc($fields[2]), $fields[3], hex($fields[12]));
+        ($mcu_name, $class_name, $directive_count) = (uc($fields[2]), $fields[3], hex($fields[13]));
         $switch_count  = 0;
         $option_count  = 0;
         $debug_present = FALSE;

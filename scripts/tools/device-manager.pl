@@ -1873,7 +1873,7 @@ sub read_all_mcu_info_from_mplabx()
         # <PART_INFO_TYPE><8857><PIC16F18857><16EXxx><2><10><7fff><40><7f><0><0><ff><5>
         # <PART_INFO_TYPE><1330><PIC18F1330><18xxxx><6><1><1fff><10><ff><7f><7f><0><c>
 
-    if (/^<PART_INFO_TYPE><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)>/io)
+    if (/^<PART_INFO_TYPE><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)><(\w+)-(\w+)><(\w+)-(\w+)><(\w+)><(\w+)>/io)
       {
       if (defined($info))
         {
@@ -1896,7 +1896,7 @@ sub read_all_mcu_info_from_mplabx()
 
       my $scl = $3;
       my ($coff,  $name,   $class, $pages, $rom)     = (hex($1), lc($2),  str2class($scl), hex($5),  hex($6));
-      my ($banks, $eeprom, $split, $fdata, $configs) = (hex($7), hex($9), hex($10),        hex($11), hex($12));
+      my ($banks, $eeprom, $split, $fdata, $configs) = (hex($7), hex($9), hex($11),        hex($14), hex($15));
 
       $name =~ s/^pic//o;
 
