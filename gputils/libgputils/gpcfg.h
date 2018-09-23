@@ -2,13 +2,13 @@
 #ifndef __GPCFG_H__
 #define __GPCFG_H__
 
-/* This file is generated automatically by the cfg-import.pl 2014-07-16 07:44:01 UTC. */
+/* This file is generated automatically by the cfg-import.pl 2018-09-23 21:57:17 UTC. */
 
 /* gpcfg.h - header file for pic configurations
    Copyright (C) 2006
    Michael Ballbach */
 
-/*  Copyright (C) 2014-2016 Molnar Karoly
+/*  Copyright (C) 2014-2017 Molnar Karoly
 
 This file is part of gputils.
 
